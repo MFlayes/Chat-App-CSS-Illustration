@@ -1,0 +1,229 @@
+body {
+  font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--app-background);
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+/*Start Varriables*/
+:root {
+  --Pale-Violet:hsl(276, 100%, 81%);
+  --chat-on-the-left: hsl(276, 55%, 52%);
+  --chat-on-the-right: hsl(271, 15%, 43%);
+  --placeholder-text: hsl(205, 19%, 87%);
+  --main-heading: hsl(271, 36%, 24%);
+  --paragraph: hsl(270, 7%, 64%);
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --app-background: hsl(270, 20%, 96%);
+  --submit-button-background: hsl(271, 36%, 24%);
+  --radio-button-outline: hsl(289, 100%, 72%);
+}
+/*End Varriables*/
+.container {
+    position: relative;
+}
+@media (min-width: 1199px){
+  .container {
+    width: 100vh;
+    height: 100vh;
+  }
+}
+.bg-ele {
+  width: 100%;
+  height: 100vh;
+  border-radius: 0px 0px 300px 300px;
+  background-image: linear-gradient(hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+  position: absolute;
+  top: -380px;
+  right: 200px;
+  z-index: -1;
+}
+@media (min-width: 1199px){
+  .bg-ele {
+    width: 600px;
+    top: -250px;
+    left: -100px;
+  }
+}
+/*Start Mobile Design*/
+.mob {
+  width: 330px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 15px;
+  margin: 10% auto;
+  box-shadow: 0px 10px 40px #0000004d;
+}
+@media (min-width: 1199px){
+  .mob {
+    position: absolute;
+    left: 400px;
+  }
+}
+/*--Mobile Top Design--*/
+.mob .top {
+  position: relative;
+  overflow: hidden;
+}
+.mob .top .micro {
+  width: 60%;
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: -18px;
+  transform: translateX(-50%);
+  border-radius: 25px;
+}
+.mob .top .bg {
+  background-image: linear-gradient(90deg,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+  padding: 30px 20px 10px;
+  border-radius: 25px 25px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mob .top .bg .fa-angle-left{
+  color: white;
+}
+.mob .top .bg img{
+  width: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.mob .top .bg .text h3{
+  font-size: .8em;
+  color: white;
+  margin: 0px 0px 3px;
+}
+.mob .top .bg .text p{
+  margin: 0;
+  font-size: .7em;
+  color: rgba(255, 255, 255, 0.5);
+}
+.mob .top .bg .fa-ellipsis-vertical{
+  color: white;
+  margin-left: 60px;
+}
+/*--Body Design--*/
+.mob .body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--app-background);
+  border-radius: 0 0 25px 25px;
+  padding: 10px;
+}
+.mob .body .chat{
+  font-size: .8em;
+  padding: 10px;
+  max-width: 70%;
+}
+.mob .body .left{
+  background-color: var(--placeholder-text);
+  color: var(--chat-on-the-left);
+  margin: 10px 0px;
+  border-radius: 15px 15px 15px 0px;
+}
+.mob .body .right{
+  background-color: white;
+  text-align: right;
+  align-self: flex-end;
+  margin: 10px 0px;
+  box-shadow: 0px 5px 8px #00000020;
+  border-radius: 15px 15px 0px 15px;
+}
+.mob .body [class="right imgs"]{
+  background-color: transparent;
+  box-shadow: none;
+}
+.mob .body [class="right imgs"] img{
+  width: 50px;
+  border-radius: 15px;
+}
+.mob .body .left-price{
+  background-image: linear-gradient(45deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  padding: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 5px;
+  max-width: 80%;
+  border-radius: 15px 15px 15px 5px;
+}
+.mob .body .left-price .circ{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 20px;
+}
+.mob .body .left-price p{
+  margin: 0;
+  font-size: .9em;
+}
+.mob .body .left-price span{
+  position: absolute;
+  right: 20px;
+  font-weight: bold;
+}
+/*--Mobile Bottom Design*/
+.mob .bottom {
+  position: relative;
+  margin: 10px 5px;
+}
+.mob .bottom [type="text"]{
+  padding: 15px;
+  border: none;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+.mob .bottom i {
+  position: absolute;
+  background-color: var(--submit-button-background);
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  width: 32px;
+  right: 20px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*End Mobile Design*/
+/*Main Text*/
+.container .main-text {
+  text-align: center;
+  width: 83%;
+  margin: 100px auto;
+}
+@media (min-width: 1199px){
+  .container .main-text {
+    text-align: left;
+    position: absolute;
+    margin: auto auto;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+  }
+}
+.container .main-text h1{
+  font-size: 40px;
+  color: var(--main-heading);
+}
+.container .main-text p{
+  line-height: 1.8;
+  color: var(--paragraph);
+}
+@media (min-width: 1199px){
+  .container .main-text p {
+    max-width: 60%;
+
+  }
+}
